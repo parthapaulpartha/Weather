@@ -1,0 +1,25 @@
+{% extends 'weather_app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+Weather Prediction - Rainy Day
+{% endblock %}
+
+
+{% block content %}
+    <section id="rainy_day_section">
+        <div class="rainy_day_container col-sm-12 col-md-12 col-lg-12">
+            <h1>RAINY DAY</h1>
+            <div class="rainyimg">
+<!--                <img src="/weather_app/static/weather_app/rainy.jpg" alt="rainy image">-->
+                 <img src="{% static 'weather_app/rainy.jpg' %}" alt="rainy image">
+            </div>
+            <div class="description">
+                <h2> It's going to be <span>Rainy Day</span>.
+                    So enjoy yourself with a cup of coffee or tea.
+                </h2>
+            </div>
+        </div>
+    </section>
+{% endblock %}

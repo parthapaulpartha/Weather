@@ -1,0 +1,154 @@
+{% extends 'weather_app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- slider start from here -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- <img src="/weather_app/static/weather_app/sunny.jpg" class="d-block w-100" style="height: 550px;" alt="..."> -->
+                <img src="{% static 'weather_app/sunny.jpg' %}" class="d-block w-100" style="height: 550px;" alt="sunny image">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Sunny</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- <img src="/weather_app/static/weather_app/rainy.jpg" class="d-block w-100" style="height: 550px;" alt="..."> -->
+                <img src="{% static 'weather_app/rainy.jpg' %}" class="d-block w-100" style="height: 550px;" alt="rainy image">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Rainy</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- <img src="/weather_app/static/weather_app/snow.jpg" class="d-block w-100" style="height: 550px;" alt="..."> -->
+                <img src="{% static 'weather_app/snow.jpg' %}" class="d-block w-100" style="height: 550px;" alt="snow image">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Snow</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- <img src="/weather_app/static/weather_app/fog.png" class="d-block w-100" style="height: 550px;" alt="..."> -->
+                <img src="{% static 'weather_app/fog.png' %}" class="d-block w-100" style="height: 550px;" alt="fog image">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Foggy</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- <img src="/weather_app/static/weather_app/drizzle.jpg" class="d-block w-100" style="height: 550px;" alt="..."> -->
+                <img src="{% static 'weather_app/drizzle.jpg' %}" class="d-block w-100" style="height: 550px;" alt="drizzle image">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Drizzle</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- slider end from here -->
+
+    <!-- Weather_section start from here -->
+    <section id="weather">
+        <div class="weather_section_container">
+            <div class="weather_section_container_2"></div>
+                <div class="row">
+
+                    <div class="weather_des col-lg-6 col-md-6 col-sm-12">
+                        <h2>Weather</h2>
+                        <p>Weather is the mix of events that happen each day in our atmosphere. Weather is 
+                            different in different parts of the world and changes over minutes, hours, days and weeks.
+                            Most weather happens in the troposphere, the part of Earth’s atmosphere that is closest to the ground.
+                            Rain and dull clouds, windy blue skies, cold snow, and sticky heat are very different conditions, yet they are all weather.
+                        </p>
+
+                        <a class="weather_btn" href="/weather_prediction/weather_predict">Weather Prediction</a>
+                    </div>
+
+                    <div class="weather_img col-lg-6 col-md-6 col-sm-12">
+                        <!-- {% load static %} -->
+                        <img src="{% static 'weather_app/weather.jpg' %}" alt="weather image">
+                        <!-- <img src="/weather_app/static/weather_app/weather.jpg" alt="weather image"> -->
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- Weather_section end here -->  
+
+    <!-- contact section starts -->
+    <section id="contact">
+        <div class="row">
+            <h2 class="contact-h2">Contact</h2>
+            <hr style="color: whitesmoke; margin-top: 20px; margin-left: 10px;">
+            <div class="col-lg-6">
+                <div class="contact_details">
+                    <form action="/weather_prediction/home/" method="POST">
+                    {% csrf_token %}
+                        <p><input class="name_input" type="text" name="name1" placeholder="Enter Your Name"></p><br>
+                        <p><input class="email_input" type="email" name="email1" placeholder="Enter Your Email"></p><br>
+                        <p>
+                            <textarea name="message1" id="" cols="30" rows="5" placeholder="Enter Your Text"></textarea>
+                        </p>
+                        <button type="submit">SEND</button>
+                        <button type="reset">RESET</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="con_text">
+                    <h2 class="stay_connect">Stay Connected</h2>
+                    <p class="stay_connect_text">Subscribe to our mailing list</p>
+                    <div class="phone">
+                        <!-- <h3>Phone</h3> -->
+                        <p><i class="fas fa-phone-alt"></i> 01701234567
+                            <i class="fas fa-phone-alt"></i> 01801234567
+                            <i class="fas fa-tty"></i> 0234567
+                        </p>
+                    </div>
+                    <div class="email">
+                        <!-- <h3>Email</h3> -->
+                        <p><i class="fas fa-envelope"></i> weather_prediction01@gmail.com</p>
+                    </div>    
+                </div>
+
+                <div class="contact-icon">
+                    <div class="row">
+                        <button class="btn" onclick="window.open('http://www.facebook.com/')" class="request-callback">
+                            <i class="fab fa-facebook-f" style="color: rgb(47, 115, 204);"></i>
+                        </button>
+                        <button class="btn" onclick="window.open('http://www.youtube.com/')" class="request-callback">
+                            <i class="fab fa-youtube" style="color: rgb(153, 39, 19);"></i>
+                        </button>
+                        <button class="btn" onclick="window.open('https://web.whatsapp.com/')" class="request-callback">
+                            <i class="fab fa-whatsapp" style="color: rgb(48, 190, 48);"></i>
+                        </button>
+                        <button class="btn" onclick="window.open('https://www.skype.com/en/')" class="request-callback">
+                            <i class="fab fa-skype" style="color: rgb(58, 140, 187);" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn" onclick="window.open('https://gmail.com/')" class="request-callback">
+                            <i class="fas fa-envelope" style="color: rgb(17, 16, 16);" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn" onclick="window.open('https://twitter.com/')" class="request-callback">
+                            <i class="fab fa-twitter" style="color: rgb(35, 123, 224);" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section end -->
+
+{% endblock %}

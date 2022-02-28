@@ -1,0 +1,64 @@
+{% extends 'weather_app/base.html' %}
+
+
+{% block content %}
+    <div class="weather_prediction_container">
+        <h2>Weather Prediction</h2>
+        <p> Please fill in all information </p>
+        <hr class="hr">
+            <form action="/weather_prediction/weather_predict/result/" >
+                <div class="row">
+                    <div class="weather_prediction_form">
+                        <div class="date col-lg-6 col-md-6 col-sm-12">
+                            <p> Date <span style=" color:red">*</span></p>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="precipitation col-lg-6 col-md-6 col-sm-12">
+                            <p> Precipitation <span style="color:red">*</span></p>
+                            <input type="text" name="precipitation" placeholder="10.9" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="weather_prediction_form">
+                        <div class="max_temp col-lg-6 col-md-6 col-sm-12">
+                            <p> Maximum Temperature <span style="color:red">*</span></p>
+                            <input type="text" name="temp_max" placeholder="10.6"  required>
+                        </div>
+
+                        <div class="min_temp col-lg-6 col-md-6 col-sm-12">
+                            <p> Minimum Temprature <span style="color:red">*</span></p>
+                            <input type="text" name="temp_min" placeholder="2.8" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="weather_prediction_form">
+                        <div class="wind col-lg-12 col-md-12 col-sm-12">
+                            <p> Wind <span style="color:red">*</span></p>
+                            <input type="text" name="wind" placeholder="4.5" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="weather_button">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="predict_button">
+                                <button type="submit" value="Predict">Predict</button>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="reset_button">
+                                <button type="reset"><span><i class="fas fa-undo-alt"></i></span>Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form><br>
+    </div>
+{% endblock %}<br>

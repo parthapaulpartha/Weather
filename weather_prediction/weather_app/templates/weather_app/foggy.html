@@ -1,0 +1,25 @@
+{% extends 'weather_app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+Weather Prediction - Foggy Day
+{% endblock %}
+
+
+{% block content %}
+    <section id="foggy_day_section">
+        <div class="foggy_day_container col-sm-12 col-md-12 col-lg-12">
+            <h1>Foggy DAY</h1>
+            <div class="foggyimg">
+<!--                <img src="/weather_app/static/weather_app/fog.png" alt="fog image">-->
+                 <img src="{% static 'weather_app/fog.png' %}" alt="fog image">
+            </div>
+            <div class="description">
+                <h2> It's going to be <span>Foggy Day</span>.
+                     It can be Partly cold.
+                </h2><br>
+            </div>
+        </div>
+    </section>
+{% endblock %}

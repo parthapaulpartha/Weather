@@ -1,0 +1,25 @@
+{% extends 'weather_app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+Weather Prediction - Sunny Day
+{% endblock %}
+
+
+{% block content %}
+    <section id="sunny_day_section">
+        <div class="sunny_day_container col-sm-12 col-md-12 col-lg-12">
+            <h1>SUNNY DAY</h1>
+            <div class="sunnyimg">
+<!--                <img src="/weather_app/static/weather_app/sunny.jpg" alt="sunny image">-->
+                 <img src="{% static 'weather_app/sunny.jpg' %}" alt="sunny image">
+            </div>
+            <div class="description">
+                <h2> It's going to be <span>Sunny Day</span>.
+                    So enjoy yourself with icecream and a cool milkshake.
+                </h2><br>
+            </div>
+        </div>
+    </section>
+{% endblock %}

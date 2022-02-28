@@ -1,0 +1,90 @@
+{% extends 'weather_app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+Weather Prediction - About
+{% endblock %}
+
+
+{% block content %}
+    <!-- About section starts -->  
+        <!-- About Us Banner section start -->
+        <section id="about_us_section">
+            <div class="about_us_banner">
+                <div class="about_us_banner_container">
+                    <div class="row">
+                        <div class="about_us_banner_text col-lg-9 col-md-9 col-sm-12">
+                            <h1>About</h1>
+                            <p>Weather is the state of the atmosphere, describing for example the degree to which it is hot or cold, 
+                                wet or dry, calm or stormy, clear or cloudy. On Earth, most weather phenomena occur in the lowest layer
+                                of the planet's atmosphere, the troposphere, just below the stratosphere. Weather refers to day-to-day 
+                                temperature, precipitation, and other atmospheric conditions, whereas climate is the term for the averaging
+                                of atmospheric conditions over longer periods of time. When used without qualification, "weather" is generally 
+                                understood to mean the weather of Earth.
+                            </p>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>    
+        <!-- About Us Banner section End -->
+
+        <!-- about body start -->
+        <div class="about_body">
+            <div class="about_section_container">
+                <div class="about_section_container_2"></div>
+                <div class="about_body_btn">
+                    <div class="row">
+                        <div class="about_us_info col-lg-3 col-md-6 col-sm-12">
+                            <a class="about_btn" href="#about_us_section">About Us</a>
+                        </div>
+                        <div class="system_advantages col-lg-3 col-md-6 col-sm-12">
+                            <a class="system_advantages_btn" href="#system_advantage_section">System Advantages</a>
+                        </div>
+                        <div class="features col-lg-3 col-md-6 col-sm-12">
+                            <a class="features_btn" href="#feature_section">System Features</a>
+                        </div>
+                        <div class="contact col-lg-3 col-md-6 col-sm-12">
+                            <a class="contact_btn" href="/weather_prediction/home/#contact">Contact</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>    
+        </div>
+        <!-- about body end -->
+
+        <!-- System advantage start -->
+        <section id="system_advantage_section">
+            <div class="system_advantage_des col-lg-12 col-md-12 col-sm-12" >
+                <h1 class="">System Advantages</h1> 
+                <hr class="system_advantages_hr">
+                <p>
+                    This system predict the most suitable Weather using data<br>
+                    1. Sunny <br>
+                    2. Rainy <br>
+                    3. Snow <br>
+                    4. Foggy <br>
+                    5. Drizzle
+                </p>
+            </div>
+        </section>    
+        <!-- System advantage end -->
+
+        <!-- features start -->
+        <section id="feature_section">
+            <div class="feature_main col-lg-12 col-md-12 col-sm-12">
+                <div class="features_des_container" id="feature_section">
+                    <h1 class="">Features</h1>
+                    <div class="row">
+                        <div class="feature col-lg-10 col-md-10 col-sm-12">
+                            <!-- <img src="/weather_app/static/weather_app/feature_of_weather.png"> -->
+                            <img src="{% static 'weather_app/feature_of_weather.png' %}" alt="feature_of_weather">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+        <!-- features end -->
+    <!-- About section ends -->
+{% endblock %}

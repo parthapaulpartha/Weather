@@ -1,0 +1,25 @@
+{% extends 'weather_app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+Weather Prediction - Snow Day
+{% endblock %}
+
+
+{% block content %}
+    <section id="snow_day_section">
+        <div class="snow_day_container col-sm-12 col-md-12 col-lg-12">
+            <h1>SNOW DAY</h1>
+            <div class="snowimg">
+<!--                <img src="/weather_app/static/weather_app/snow.jpg" alt="snow image">-->
+                 <img src="{% static 'weather_app/snow.jpg' %}" alt="snow image">
+            </div>
+            <div class="description">
+                <h2> It's going to be <span>Snow Day</span>.
+                    Don't go out from your house and keep protect yourself from snow.
+                </h2><br>
+            </div>
+        </div>
+    </section>
+{% endblock %}

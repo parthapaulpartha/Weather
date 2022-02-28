@@ -1,0 +1,26 @@
+{% extends 'weather_app/base.html' %}
+{% load static %}
+
+
+{% block title %}
+Weather Prediction - Drizzle Day
+{% endblock %}
+
+
+{% block content %}
+    <section id="drizzle_day_section">
+        <div class="drizzle_day_container col-sm-12 col-md-12 col-lg-12">
+            <h1>Drizzle DAY</h1>
+            <div class="drizzleimg">
+                <!-- <img src="/weather_app/static/weather_app/drizzle.jpg" alt="drizzle image"> -->
+
+                <img src="{% static 'weather_app/drizzle.jpg' %}" alt="drizzle image">
+            </div>
+            <div class="description">
+                <h2> It's going to be <span>Drizzle Day</span>.
+                     It can be light rain.
+                </h2><br>
+            </div>
+        </div>
+    </section>
+{% endblock %}
